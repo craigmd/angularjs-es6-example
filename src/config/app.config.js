@@ -1,3 +1,5 @@
+import template from '../layout/app-view.html'
+
 function AppConfig($httpProvider, $stateProvider, $locationProvider, $urlRouterProvider) {
   'ngInject';
 
@@ -10,7 +12,7 @@ function AppConfig($httpProvider, $stateProvider, $locationProvider, $urlRouterP
   $stateProvider
   .state('app', {
     abstract: true,
-    templateUrl: 'layout/app-view.html'
+    templateUrl: template
   });
 
   $urlRouterProvider.otherwise('/');

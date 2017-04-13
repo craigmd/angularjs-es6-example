@@ -1,3 +1,5 @@
+import template from './home.html'
+
 function HomeConfig($stateProvider) {
   'ngInject';
 
@@ -6,7 +8,7 @@ function HomeConfig($stateProvider) {
     url: '/',
     controller: 'HomeCtrl',
     controllerAs: '$ctrl',
-    templateUrl: 'home/home.html',
+    templateUrl: template,
     title: 'Home'
   });
 

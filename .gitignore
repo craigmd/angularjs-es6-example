@@ -36,4 +36,4 @@ node_modules
 
 build/*
 dist/*
-src/js/config/app.templates.js
+src/config/app.templates.js

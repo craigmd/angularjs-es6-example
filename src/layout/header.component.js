@@ -1,3 +1,5 @@
+import template from './header.html'
+
 class AppHeaderCtrl {
   constructor(AppConstants) {
     'ngInject';
@@ -8,7 +10,7 @@ class AppHeaderCtrl {
 
 let AppHeader = {
   controller: AppHeaderCtrl,
-  templateUrl: 'layout/header.html'
+  templateUrl: template
 };
 
 export default AppHeader;

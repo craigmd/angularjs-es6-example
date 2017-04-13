@@ -1,3 +1,5 @@
+import template from './profile.html'
+
 function ProfileConfig($stateProvider) {
   'ngInject';
 
@@ -6,7 +8,7 @@ function ProfileConfig($stateProvider) {
     url: '/profile',
     controller: 'ProfileCtrl',
     controllerAs: '$ctrl',
-    templateUrl: 'profile/profile.html'
+    templateUrl: template
   });
 
 };
