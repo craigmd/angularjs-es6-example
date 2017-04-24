@@ -15,14 +15,7 @@
           </a>
         </p>
 
-        <ul class="error-messages" ng-show="$ctrl.errors">
-          <div ng-repeat="(key, errors) in $ctrl.errors">
-            <li ng-repeat="error in errors">
-              {{key}} {{error}}
-            </li>
-          </div>
-
-        </ul>
+        <list-errors errors="$ctrl.errors"></list-errors>
 
         <form ng-submit="$ctrl.submitForm()">
           <fieldset ng-disable="$ctrl.isSubmitting">
