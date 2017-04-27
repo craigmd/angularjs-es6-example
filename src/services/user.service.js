@@ -75,6 +75,17 @@ class User {
     this._JWT.destroy();
     this._$state.reload();
   }
+
+  update(fields) {
+    return this._$http({
+      url: this._AppConstants.api + '/user',
+      method: 'PUT',
+      data: { user: fields }
+    }).then(res => {
+      this.current = res.data.user;
+      return res.data.user;
+    });
+  }
 }
 
 export default User
