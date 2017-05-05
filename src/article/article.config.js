@@ -9,9 +9,16 @@ function ArticleConfig($stateProvider) {
     controller: 'ArticleCtrl',
     controllerAs: '$ctrl',
     templateUrl: template,
-    title: 'Article'
+    title: 'Article',
+    resolve: {
+      article: function(Articles, $state, $stateParams) {
+        return Articles.get($stateParams.slug).then(
+          article => article,
+          err => $state.go('app.home')
+        );
+      }
+    }
   });
-
 };
 
 export default ArticleConfig;
