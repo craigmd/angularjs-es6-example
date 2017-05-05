@@ -5,7 +5,6 @@ class ArticleCtrl {
     'ngInject';
 
     this.article = article;
-
     this.article.body = $sce.trustAsHtml(
       marked(this.article.body, { sanitize: true })
     );
