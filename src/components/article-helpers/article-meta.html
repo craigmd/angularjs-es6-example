@@ -4,12 +4,13 @@
   </a>
   <div class="info">
     <a class="author"
-      ui-sref="app.profile({ username:$ctrl.article.author.username })"
+      ui-sref="app.profile({ username: $ctrl.article.author.username })"
       ng-bind="$ctrl.article.author.username">
     </a>
     <span class="data"
       ng-bind="$ctrl.article.createdAt | date:'longDate'">
     </span>
+    {{ $ctrl.getArticle() | json }}
   </div>
 
   <ng-transclude></ng-transclude>

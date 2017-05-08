@@ -22,7 +22,7 @@ class Articles {
         err => reject(err)
       );
     });
-
+    
     return promise;
   }
 

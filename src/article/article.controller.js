@@ -11,5 +11,4 @@ class ArticleCtrl {
   }
 }
 
-
 export default ArticleCtrl;

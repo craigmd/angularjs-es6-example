@@ -6,7 +6,7 @@ function EditorConfig($stateProvider) {
 
   $stateProvider
     .state('app.editor', {
-      url: '/editor',
+      url: '/editor/:slug',
       controller: 'EditorCtrl',
       controllerAs: '$ctrl',
       templateUrl: template,
