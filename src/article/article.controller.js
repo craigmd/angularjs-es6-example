@@ -1,7 +1,7 @@
 import marked from 'marked'
 
 class ArticleCtrl {
-  constructor(article, $sce, $rootScope) {
+  constructor(article, $sce) {
     'ngInject';
 
     this.article = article;

@@ -7,6 +7,27 @@ class Articles {
     this._$q = $q;
   }
 
+  destory(slug) {
+    return this._$http({
+      url: this._AppConstants.api + '/articles/' + slug,
+      method: 'DELETE'
+    });
+  }
+
+  favorite(slug) {
+    return this._$http({
+      url: this._AppConstants.api + '/articles/' + slug + '/favorite',
+      method: 'POST'
+    });
+  }
+
+  unFavorite(slug) {
+    return this._$http({
+      url: this._AppConstants.api + '/articles/' + slug + '/favorite',
+      method: 'DELETE'
+    });
+  }
+
   get(slug) {
     let promise = this._$q((resolve, reject) => {
       if (!slug.replace(" ", "")) {
@@ -22,7 +43,7 @@ class Articles {
         err => reject(err)
       );
     });
-    
+
     return promise;
   }
 

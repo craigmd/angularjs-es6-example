@@ -1,10 +1,12 @@
 import template from './article-actions.html'
 
 class ArticleActionsCtrl {
-  constructor(User) {
+  constructor(Articles, User, $state) {
     'ngInject';
 
+    this._Articles = Articles;
     this._User = User;
+    this._$state = $state;
   }
 
   $onInit(){
@@ -13,6 +15,14 @@ class ArticleActionsCtrl {
     } else {
       this.canModify = false;
     }
+  }
+
+  deleteArticle() {
+    this.isDeleting = true;
+    this._Articles.destory(this.article.slug).then(
+      success => this._$state.go('app.home'),
+      err => this._$state.go('app.home')
+    );
   }
 }
 

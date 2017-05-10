@@ -13,7 +13,10 @@ function ArticleConfig($stateProvider) {
     resolve: {
       article: function(Articles, $state, $stateParams) {
         return Articles.get($stateParams.slug).then(
-          (article) => article,
+          (article) => {
+            console.log('%c Article: ', 'color: green', article);
+            return article
+          },
           err => $state.go('app.home')
         );
       }
