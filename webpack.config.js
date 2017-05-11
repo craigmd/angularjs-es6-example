@@ -23,10 +23,11 @@ var config = {
         ]
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.(css|scss|less)$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'less-loader'
         ]
       },
       {

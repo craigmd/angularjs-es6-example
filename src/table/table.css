@@ -1,0 +1,11 @@
+@import '../../node_modules/angular-data-table/src/dataTable.less';
+@import '../../node_modules/angular-data-table/src/themes/material.less';
+
+.dt {
+  width: 75%;
+  margin: 50px auto;
+}
+
+.dt-body {
+  height: 75vh;
+}

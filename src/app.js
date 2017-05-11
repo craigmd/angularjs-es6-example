@@ -15,6 +15,7 @@ import './services';
 import './auth';
 import './settings';
 import './editor';
+import './table'
 
 // Create and bootstrap application (modules)
 const requires = [
@@ -27,7 +28,8 @@ const requires = [
   'app.services',
   'app.auth',
   'app.settings',
-  'app.editor'
+  'app.editor',
+  'app.table'
 ];
 
 // Mount on window for testing
