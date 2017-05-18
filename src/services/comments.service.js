@@ -13,6 +13,13 @@ class Comments {
       data: { comment: { body: payload } }
     }).then(res => res.data.comment);
   }
+
+  getAll(slug) {
+    return this._$http({
+      url: this._AppConstants.api + '/articles/' + slug + '/comments',
+      method: 'GET'
+    }).then(res => res.data.comments);
+  }
 }
 
 export default Comments
