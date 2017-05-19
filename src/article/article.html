@@ -75,26 +75,10 @@
           to add comments on this site.
         </p>
 
-        <div class="card" ng-repeat="comment in $ctrl.comments">
-          <div class="card-block">
-            <p class="card-text" ng-bind="::comment.body"></p>
-          </div>
-          <div class="card-footer">
-            <a class="comment-author"
-              ui-sref="app.profile({ username: comment.author.username })">
-              <img class="comment-author-img" ng-src="{{::comment.author.image}}" />
-            </a>
-            &nbsp;
-            <a class="comment-author"
-              ui-sref="app.profile({ username: comment.author.username })"
-              ng-bind="::comment.author.username">
-            </a>
-            <span class="date-posted"
-              ng-bind="::comment.createdAt | date: 'longDate'">
-            </span>
-          </div>
-        </div>
-
+        <comment ng-repeat="comment in $ctrl.comments"
+          data="comment"
+          delete-cb="$ctrl.deleteComment(comment.id, $index)">
+        </comment>
 
       </div>
     </div>

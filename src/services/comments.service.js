@@ -20,6 +20,13 @@ class Comments {
       method: 'GET'
     }).then(res => res.data.comments);
   }
+
+  destroy(commentId, articleSlug) {
+    return this._$http({
+      url: this._AppConstants.api + '/articles/' + articleSlug + '/comments/' + commentId,
+      method: 'DELETE'
+    });
+  }
 }
 
 export default Comments
