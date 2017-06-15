@@ -19,7 +19,7 @@ class ArticleActionsCtrl {
 
   deleteArticle() {
     this.isDeleting = true;
-    this._Articles.destory(this.article.slug).then(
+    this._Articles.destroy(this.article.slug).then(
       success => this._$state.go('app.home'),
       err => this._$state.go('app.home')
     );

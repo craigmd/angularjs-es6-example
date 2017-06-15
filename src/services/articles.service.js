@@ -7,7 +7,7 @@ class Articles {
     this._$q = $q;
   }
 
-  destory(slug) {
+  destroy(slug) {
     return this._$http({
       url: this._AppConstants.api + '/articles/' + slug,
       method: 'DELETE'
@@ -64,6 +64,23 @@ class Articles {
     request.data = { article: article };
 
     return this._$http(request).then(res => res.data.article);
+  }
+
+  // Config object spec:
+  //
+  // {
+  //   type: String [REQUIRED] - Accepts "all", "feed"
+  //   filters: Object that serves as a key => value of URL params (i.e. {author:"ericsimons"} )
+  // }
+
+  query(config) {
+    let request = {
+      url: this._AppConstants + '/articles' + ((config.type === 'feed') ? '/feed' : ''),
+      method: 'GET',
+      params: config.filters ? config.filters : null
+    };
+
+    return this._$http(request).then(res => res.data);
   }
 }
 

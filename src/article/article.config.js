@@ -15,7 +15,7 @@ function ArticleConfig($stateProvider) {
         return Articles.get($stateParams.slug).then(
           (article) => {
             console.log('%c Article: ', 'color: green', article);
-            return article
+            return article;
           },
           err => $state.go('app.home')
         );
