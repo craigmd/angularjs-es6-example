@@ -1,0 +1,40 @@
+
+[x-arrow] {
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+[x-placement^="top"] [x-arrow] {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #FFC107;
+  bottom: -7px;
+}
+
+[x-placement^="right"] [x-arrow] {
+  border-top: 7px solid transparent;
+  border-right: 7px solid #FFC107;
+  border-bottom: 7px solid transparent;
+  left: -7px;
+}
+
+[x-placement^="bottom"] [x-arrow] {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #FFC107;
+  top: -7px;
+}
+
+[x-placement^="left"] [x-arrow] {
+  border-top: 7px solid transparent;
+  border-left: 7px solid #FFC107;
+  border-bottom: 7px solid transparent;
+  right: -7px;
+}
+
+.popout-content {
+  background-color: #FFC107;
+  padding: 10px;
+  max-width: 300px;
+}
